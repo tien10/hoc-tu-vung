@@ -2,14 +2,14 @@
 <div *ngIf="isShow">
   <input type="text" placeholder="English" [(ngModel)]="newEn" /><br />
   <input type="text" placeholder="Vietnamese" [(ngModel)]="newVi" /><br />
-  <button (click)="add()">Add new word</button>
+  <button (click)="add()">Thêm</button>
 </div>
-<button (click)="isShow = !isShow" *ngIf="!isShow">Add new word</button>
+<button (click)="isShow = !isShow" *ngIf="!isShow">Thêm từ mới</button>
 <br />
 <select [(ngModel)]="filterStatus">
-  <option value="all">All</option>
-  <option value="remembered">Remembered</option>
-  <option value="forgot">Forgot</option>
+  <option value="all">Tất cả</option>
+  <option value="remembered">Đã thuộc</option>
+  <option value="forgot">Chưa thuộc</option>
 </select>
 <div *ngFor="let word of arrWords">
   <div *ngIf="showStatus(word.memorized)" class="word">
@@ -17,9 +17,9 @@
       {{ word.en }}
     </h4>
     <p>{{ word.vn }}</p>
-    <button (click)="remove(word.id)">Delete</button>
+    <button (click)="remove(word.id)">Xóa</button>
     <button (click)="word.memorized = !word.memorized">
-      {{ word.memorized ? "Forgot" : "Remembered" }}
+      {{ word.memorized ? "Chưa thuộc" : "Đã thuộc" }}
     </button>
   </div>
 </div>

@@ -25,7 +25,7 @@ export class WordsComponent implements OnInit {
     return all || remembered || forgot;
   }
   add(): void {
-    console.log(this.newEn, this.newVi);
+    // console.log(this.newEn, this.newVi);
     if (this.newEn !== null && this.newVi !== null) {
       this.arrWords.unshift({
         id: this.arrWords.length + 1,
