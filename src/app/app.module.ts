@@ -7,9 +7,11 @@ import { AppComponent } from './app.component';
 import { WordComponent } from './word/word.component';
 import { UserFormComponent } from './user-form/user-form.component';
 import { WordsComponent } from './words/words.component';
+import { PersonComponent } from './person/person.component';
+import { ListPersonComponent } from './list-person/list-person.component';
 
 @NgModule({
-  declarations: [AppComponent, WordComponent, UserFormComponent, WordsComponent],
+  declarations: [AppComponent, WordComponent, UserFormComponent, WordsComponent, PersonComponent, ListPersonComponent],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],

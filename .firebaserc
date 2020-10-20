@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "hoc-tu-vung-c444f"
+  },
+  "targets": {
+    "hoc-tu-vung-c444f": {
+      "hosting": {
+        "learn-angular": [
+          "hoc-tu-vung-c444f"
+        ]
+      }
+    }
+  }
+}
