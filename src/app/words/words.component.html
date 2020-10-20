@@ -1,0 +1,25 @@
+<!-- <a href="#">Tien</a> -->
+<div *ngIf="isShow">
+  <input type="text" placeholder="English" [(ngModel)]="newEn" /><br />
+  <input type="text" placeholder="Vietnamese" [(ngModel)]="newVi" /><br />
+  <button (click)="add()">Add new word</button>
+</div>
+<button (click)="isShow = !isShow" *ngIf="!isShow">Add new word</button>
+<br />
+<select [(ngModel)]="filterStatus">
+  <option value="all">All</option>
+  <option value="remembered">Remembered</option>
+  <option value="forgot">Forgot</option>
+</select>
+<div *ngFor="let word of arrWords">
+  <div *ngIf="showStatus(word.memorized)" class="word">
+    <h4 [ngStyle]="{ color: word.memorized ? 'green' : 'red' }">
+      {{ word.en }}
+    </h4>
+    <p>{{ word.vn }}</p>
+    <button (click)="remove(word.id)">Delete</button>
+    <button (click)="word.memorized = !word.memorized">
+      {{ word.memorized ? "Forgot" : "Remembered" }}
+    </button>
+  </div>
+</div>

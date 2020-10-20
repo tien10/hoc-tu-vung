@@ -1,0 +1,9 @@
+.word {
+  background-color: #eeeeee;
+  padding: 5px;
+  margin: 5px;
+  width: 150px;
+}
+button {
+  margin: 5px;
+}
